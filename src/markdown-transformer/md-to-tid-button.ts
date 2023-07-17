@@ -32,7 +32,8 @@ class MdToTidButtonWidget extends Widget {
     }</span>`;
     transformButton.addEventListener('click', this.onExecuteButtonClick.bind(this));
     transformButton.title = transformButton.ariaLabel = 'MD2Tid';
-    nextSibling?.before?.(transformButton);
+    // eslint-disable-next-line unicorn/prefer-modern-dom-apis
+    parent.insertBefore(transformButton, nextSibling);
     this.domNodes.push(transformButton);
   }
 
