@@ -1,6 +1,6 @@
 **This is an example markdown, not the Readme of this plugin! Use button on toolbar to turn this into a Tid!**
 
-The button looks like {{$:/plugins/linonetwo/markdown-transformer/ViewToolbarButton}}
+The button looks like {{$:/plugins/linonetwo/markdown-transformer/md-to-tid-button-icon}}
 
 Current type is {{!!type}}
 

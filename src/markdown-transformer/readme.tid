@@ -11,6 +11,31 @@ type: text/vnd.tiddlywiki
 
 If you add filetype `text/x-markdown` to your tiddler, there will be a view toolbar icon show up, which will help you transform markdown to tiddlywiki on clicked.
 
+!! Advanced Usage
+
+!!! message
+
+We provide a message `tm-md-tiddler-to-tid` to transform markdown tiddler to tiddlywiki. You can use it in your own plugin.
+
+Like this:
+
+```tid
+<$button message="tm-md-tiddler-to-tid" param="Some title">
+  Click me
+</$button>
+```
+
+Or multiple tiddlers at once:
+
+```tid
+<$button>
+  <$list filter="[tag[xxx]]">
+    <$action-sendmessage $message="tm-md-tiddler-to-tid" $param=<<currentTiddler>> />
+  </$list>
+  Click me!
+</$button>
+```
+
 !! TODO
 
 We use [[Unifiedjs|https://github.com/unifiedjs/unified]]'s [[mdast-util-from-markdown|https://github.com/syntax-tree/mdast-util-from-markdown]] to parse md, and use modified version of [[mdast-util-to-markdown|https://github.com/syntax-tree/mdast-util-to-markdown]] to generate tid file. If someday we have a tid parser that generate unified AST, we might be able to generate md file from tid.
