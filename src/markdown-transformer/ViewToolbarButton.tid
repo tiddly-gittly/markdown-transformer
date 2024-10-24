@@ -7,8 +7,6 @@ short-caption: md to tid
 description: Transform MD to Tid wikitext
 
 \whitespace trim
-<$let title={{!!title}} type={{!!type}}>
-<$list filter="[{!!type}match[text/x-markdown]]">
-<$md-to-tid-button title=<<title>> type=<<type>> />
-</$list>
-</$let>
+<% if text/x-markdown text/markdown application/markdown application/x-markdown +[match{!!type}] %>
+  <$md-to-tid-button title={{!!title}} type={{!!type}} />
+<% endif %>

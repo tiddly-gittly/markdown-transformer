@@ -1,6 +1,8 @@
-This is an example markdown, use button on toolbar to turn this into a Tid!
+**This is an example markdown, not the Readme of this plugin! Use button on toolbar to turn this into a Tid!**
 
-{{!!type}}
+The button looks like {{$:/plugins/linonetwo/markdown-transformer/ViewToolbarButton}}
+
+Current type is {{!!type}}
 
 # plugins
 
