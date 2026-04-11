@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  esbuild-plugin-browserslist: 1.0.2
+
 importers:
 
   .:
@@ -1633,12 +1636,12 @@ packages:
     resolution: {integrity: sha512-w+5mJ3GuFL+NjVtJlvydShqE1eN3h3PbI7/5LAsYJP/2qtuMXjfL2LpHSRqo4b4eSF5K/DH1JXKUAHSB2UW50g==}
     engines: {node: '>= 0.4'}
 
-  esbuild-plugin-browserslist@2.0.0:
-    resolution: {integrity: sha512-gm8EITyyfS3h5I+f/+6C+TFXI23PWi80vHtoccIA17GIoZDSSjHYZw+MINXrlQZ7DZ57myL0JAuDsKbUZlWQgw==}
+  esbuild-plugin-browserslist@1.0.2:
+    resolution: {integrity: sha512-RFgs0SLRMExC7vBh80FnbTgN4eyTtYAuCmfPSArukMC0b6tMnfkgVmFDR/CTR2cJu6IViAomsdXyF9cfk65DsQ==}
     engines: {node: ^20.19.0 || ^22.12.0 || >23.0.0}
     peerDependencies:
-      browserslist: ^4.28.0
-      esbuild: ~0.27.0
+      browserslist: ^4.21.8
+      esbuild: ~0.25.10
 
   esbuild-style-plugin@1.6.3:
     resolution: {integrity: sha512-XPEKf4FjLjEVLv/dJH4UxDzXCrFHYpD93DBO8B+izdZARW5b7nNKQbnKv3J+7VDWJbgCU+hzfgIh2AuIZzlmXQ==}
@@ -3513,6 +3516,7 @@ packages:
     resolution: {integrity: sha512-T25acZfdhAX/lUVPY/9SXo7bMJKgSaMs5PDOb83S2WKbTCD7DnOUQ4aC3qDy0j5XqlCn4ih3mzMWct3xnQx+Mw==}
     engines: {node: '>=0.8.2'}
     hasBin: true
+    bundledDependencies: []
 
   tinyexec@1.1.1:
     resolution: {integrity: sha512-VKS/ZaQhhkKFMANmAOhhXVoIfBXblQxGX1myCQ2faQrfmobMftXeJPcZGp0gS07ocvGJWDLZGyOZDadDBqYIJg==}
@@ -4657,9 +4661,9 @@ snapshots:
     dependencies:
       acorn: 8.16.0
 
-  acorn-typescript@1.4.13(acorn@8.13.0):
+  acorn-typescript@1.4.13(acorn@8.16.0):
     dependencies:
-      acorn: 8.13.0
+      acorn: 8.16.0
 
   acorn-walk@8.2.0: {}
 
@@ -5367,7 +5371,7 @@ snapshots:
       is-date-object: 1.0.5
       is-symbol: 1.0.4
 
-  esbuild-plugin-browserslist@2.0.0(browserslist@4.28.2)(esbuild@0.27.7):
+  esbuild-plugin-browserslist@1.0.2(browserslist@4.28.2)(esbuild@0.27.7):
     dependencies:
       browserslist: 4.28.2
       debug: 4.4.3
@@ -7606,8 +7610,8 @@ snapshots:
       '@ampproject/remapping': 2.3.0
       '@jridgewell/sourcemap-codec': 1.5.0
       '@types/estree': 1.0.6
-      acorn: 8.13.0
-      acorn-typescript: 1.4.13(acorn@8.13.0)
+      acorn: 8.16.0
+      acorn-typescript: 1.4.13(acorn@8.16.0)
       aria-query: 5.3.2
       axobject-query: 4.1.0
       esm-env: 1.0.0
@@ -7678,7 +7682,7 @@ snapshots:
       cli-progress: 3.12.0
       commander: 14.0.3
       esbuild: 0.27.7
-      esbuild-plugin-browserslist: 2.0.0(browserslist@4.28.2)(esbuild@0.27.7)
+      esbuild-plugin-browserslist: 1.0.2(browserslist@4.28.2)(esbuild@0.27.7)
       esbuild-style-plugin: 1.6.3
       esbuild-svelte: 0.9.4(esbuild@0.27.7)(svelte@5.1.0)
       get-port-please: 3.2.0
